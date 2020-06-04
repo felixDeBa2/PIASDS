@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<%
+            String nombreUsuario = "";
+
+            if (session.getAttribute("nombreUsuario") != null) {
+                nombreUsuario = (String) session.getAttribute("nombreUsuario");
+            }
+
+            if (nombreUsuario == "") {
+                response.sendRedirect("index.html");
+            }
+
+            List cumpleHuesped = null;
+            HuespedDAODBImpl huespedDao = new HuespedDAODBImpl();
+            try {
+                cumpleHuesped = huespedDao.cumpleHuesped();
+            } catch (Exception e) {
+
+            }
+            
+            List cumpleEmpleado = null;
+            EmpleadoDAODBImpl empleadoDao = new EmpleadoDAODBImpl();
+            try{
+                cumpleEmpleado = empleadoDao.cumpleEmpleado();
+            }catch (Exception e){
+                
+            }
+
+        %>
+    <meta charset="UTF-8">
+	<title></title> 
+	<meta name="viewport" content="width=device-width, user-scalable=yes, initial-scale=1.0, maximum-scale=3.0, minimum-scale=1.0">
+ <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" >
+	<link rel="stylesheet" href="styles/estilos.css">
+	
+
+</head>  
+<body>
+    <form class="formulario">
+    
+    <h1>Perfil</h1>
+     <div class="contenedor">
+     
+     
+        <div class="input-contenedor">
+        <i class="fas fa-user icon"></i>
+        <input type="text" placeholder="Nombre Completo">
+        </div>
+
+         <div class="input-contenedor">
+         <i class="fas fa-envelope icon"></i>
+         <input type="text" placeholder="Correo Electronico">
+         </div>
+         
+         <div class="input-contenedor">
+         <i class="fas fa-key icon"></i>
+         <input type="password" placeholder="Contraseña">
+        </div>
+        
+         <div class="input-description">
+         <i class="fas fa-id-card icon"></i>
+         <textarea type="text" rows="5" name="description" placeholder="Descripción"></textarea>
+         </div>
+
+         <p><input type="submit" value="Eliminar" class="buttonDel_Save" onclick='confirm("¿Esta seguro que desea eliminar el perfil?")'>
+         <input type="submit" value="Guardar" class="buttonDel_Save" ><p>
+         <input type="submit" value="Salir" class="buttonLogout">
+     </div>
+    </form>
+</body>
+</html>

@@ -1,0 +1,147 @@
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 0;
+   background: url(imagen5.jpg);
+    background-size: cover;
+    background-attachment: fixed;
+}
+* {
+    box-sizing: border-box;
+}
+.contenedor{
+    width: 100%;
+    padding: 15px;
+}
+.formulario{
+    background: rgba(189, 199, 201, 0.568);
+    margin-top: 150px;
+    padding: 3px;
+}
+h1{
+    text-align: center;
+    color: #1a2537;
+    font-size: 40px;
+}
+input[type="text"],
+input[type="email"],
+input[type="password"]{
+    font-size: 20px;
+    width: 82%;
+    padding: 10px;
+    border: none;
+}
+textarea[type="email"],
+textarea[type="text"]{
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 20px;
+    width: 100%;
+    padding: 10px;
+    border: none;
+}
+.input-contenedor{
+    margin-bottom: 15px;
+    border: 1px solid #aaa;
+}
+.input-description{
+    margin-bottom: 20px;
+    border: 1px solid #aaa;
+    font-size: 20px;
+    width: 100%;
+    padding: 30px;
+}
+.icon{
+    min-width: 50px;
+    text-align: center;
+    color: #1a2537;
+}
+.buttonLog_Reg{
+    border: none;
+    width: 100%;
+    color: white;
+    font-size: 20px;
+    background:  #1a2537;
+    padding: 15px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+.buttonLog_Reg:hover{
+    background: cadetblue;
+}
+
+.buttonDel_Save{
+    border: none;
+    width: 150px;
+    color: white;
+    font-size: 20px;
+    background:  #1a2537;
+    padding: 15px 20px;
+    border-radius: 10px;
+    margin-left: 5px;
+    cursor: pointer;
+}
+.buttonDel_Save:hover{
+    background: cadetblue;
+}
+.buttonLogout{
+    border: none;
+    width: 310px;
+    color: white;
+    font-size: 20px;
+    background:  #1a2537;
+    padding: 15px 20px;
+    border-radius: 10px;
+    margin-left: 5px;
+    cursor: pointer;
+}
+.buttonLogout:hover{
+    background: cadetblue;
+}
+p{
+    text-align: center;
+}
+.link{
+    text-decoration: none;
+      color: #1a2537;
+    font-weight: 600;
+}
+.link:hover{
+     color: cadetblue;
+}
+@media(min-width:768px)
+{
+    .formulario{
+        margin: auto;
+        width: 500px;
+        margin-top: 60px;
+        border-radius: 2%;
+        background: rgba(189, 199, 201, 0.568)
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
